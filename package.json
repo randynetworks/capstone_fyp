@@ -1,16 +1,24 @@
 {
   "name": "capstone_fyp",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "A website for find your passion learning",
+=======
+  "description": "A website for find your passion learning ",
+>>>>>>> 1785de83917b6320b11f6927e9024013e238c0c3
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
+<<<<<<< HEAD
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.3.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.3"
   }
+=======
+  "license": "ISC"
+>>>>>>> 1785de83917b6320b11f6927e9024013e238c0c3
 }

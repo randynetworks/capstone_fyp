@@ -7,6 +7,7 @@
 
 body, html {
     font-family: 'Roboto', 'sans-serif';
+    background-color: #f6f6f6;
 }
 
 /* Navbar / Header*/
@@ -26,4 +27,20 @@ body, html {
 .drop-cust-item:hover {
     color: #212121 !important;
 }
+
+/* Hero / Jumbotron */
+.jumbotron {
+    padding: 2rem 1rem;
+}
+
+.hero-img {
+    width: 600px;
+    height: 250px;
+    border-radius: 20px;
+}
+
+.text-hero {
+    color: #6D9886;
+}
+
 

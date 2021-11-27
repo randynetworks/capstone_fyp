@@ -1,3 +1,29 @@
-h1 {
-    color: blueviolet;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
 }
+
+body, html {
+    font-family: 'Roboto', 'sans-serif';
+}
+
+/* Navbar / Header*/
+.nav-custom, .dropdwon-custom li {
+    background-color: #6D9886;
+}
+
+.nav-custom {
+    border-radius: 0 0 12px 12px;
+}
+
+.dropdwon-custom {
+    padding: 0;
+    border: none;
+}
+
+.drop-cust-item:hover {
+    color: #212121 !important;
+}
+

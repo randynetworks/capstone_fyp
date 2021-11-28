@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Find Your Passion</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    font-family: 'Roboto', 'sans-serif';
+    background-color: #f6f6f6;
+}
+
+.bg-custom, .dropdwon-custom li, .button-custom a {
+    background-color: #6D9886;
+}
+/* Navbar / Header*/
+
+.nav-custom {
+    border-radius: 0 0 12px 12px;
+}
+
+.dropdwon-custom {
+    padding: 0;
+    border: none;
+}
+
+.drop-cust-item:hover {
+    color: #212121 !important;
+}
+
+/* Hero / Jumbotron */
+.jumbotron {
+    padding: 6rem 1rem;
+}
+
+.hero-img {
+    width: 600px;
+    height: 250px;
+    border-radius: 20px;
+}
+ /* Categori list */
+ h2, h4 a {
+     color: #6D9886;
+ }
+
+/* Footer */
+footer {
+    border-radius: 12px 12px 0 0;
+}
+
+/* akhir style fyp asli */
+.item-title {
+    text-decoration: none;
+}
+
+.item-title:hover {
+    color:tomato;
+}
+
+.list-item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+.list-item > div > img {
+    border-radius: 12px;
+}
+
+@media screen and (min-width: 769px) {
+    .list-item > div > img {
+        border-radius: 12px;
+        width: 70%;
+    }
+
+
+}
+
+    </style>
+</head>
+<body>
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-custom nav-custom">
+    <div class="container">
+      <a class="navbar-brand" href="#">FYP</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-beetween" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link text-white" aria-current="page" href="#">Home</a>
+          <a class="nav-link text-white" href="#">Category</a>
+          <a class="nav-link text-white" href="#">Post</a>
+          <a class="nav-link text-white" href="#">About</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+   
+
+  <!-- List-item -->
+   <main id="mainContent">
+     <section id="list-item" class="mt-5">
+        <div class="container pt-5">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h2>Web Developer</h2>
+                </div>
+            </div>
+          <div class="row list-item mb-4">
+              <div class="col align-self-center">
+                  <img src="https://media.istockphoto.com/photos/pond-at-waterline-picture-id1035285964?k=6&m=1035285964&s=612x612&w=0&h=yGLh3UwtFLxBOW-_wuXCzc8-S-iC2_vDOuKOP1e3csU=" alt="" class="img-fluid">
+              </div>
+              <div class="col align-self-center">
+                  <h4><a href="#" class="item-title">Belajar Dasar Pemrograman Web</a></h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, consequatur!</p>
+                  <p class="text-secondary">dibuat oleh Dianah</p>
+              </div>
+          </div>
+          <div class="row list-item mb-4">
+              <div class="col align-self-center">
+                  <img src="https://media.istockphoto.com/photos/pond-at-waterline-picture-id1035285964?k=6&m=1035285964&s=612x612&w=0&h=yGLh3UwtFLxBOW-_wuXCzc8-S-iC2_vDOuKOP1e3csU=" alt="" class="img-fluid">
+              </div>
+              <div class="col align-self-center">
+                  <h4><a href="#" class="item-title">Belajar Dasar Pemrograman Web</a></h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, consequatur!</p>
+                  <p class="text-secondary">dibuat oleh Dianah</p>
+              </div>
+          </div>
+          <div class="row list-item mb-4">
+              <div class="col align-self-center">
+                  <img src="https://media.istockphoto.com/photos/pond-at-waterline-picture-id1035285964?k=6&m=1035285964&s=612x612&w=0&h=yGLh3UwtFLxBOW-_wuXCzc8-S-iC2_vDOuKOP1e3csU=" alt="" class="img-fluid">
+              </div>
+              <div class="col align-self-center">
+                  <h4><a href="#" class="item-title">Belajar Dasar Pemrograman Web</a></h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, consequatur!</p>
+                  <p class="text-secondary">dibuat oleh Dianah</p>
+              </div>
+          </div>
+        </div>
+     </section>
+   </main>
+
+   <!-- Footer -->
+   <footer class="bg-custom fixed-bottom">
+    <div class="container text-center">
+      <p class="text-white pt-3">&copy <b>Find Your Passion</b> 2021</p>
+    </div>
+   </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

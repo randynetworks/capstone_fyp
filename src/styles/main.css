@@ -10,10 +10,10 @@ body, html {
     background-color: #f6f6f6;
 }
 
-/* Navbar / Header*/
-.nav-custom, .dropdwon-custom li {
+.bg-custom, .dropdwon-custom li, .button-custom a {
     background-color: #6D9886;
 }
+/* Navbar / Header*/
 
 .nav-custom {
     border-radius: 0 0 12px 12px;
@@ -38,9 +38,12 @@ body, html {
     height: 250px;
     border-radius: 20px;
 }
+ /* Categori list */
+ h2 {
+     color: #6D9886;
+ }
 
-.text-hero {
-    color: #6D9886;
+/* Footer */
+footer {
+    border-radius: 12px 12px 0 0;
 }
-
-

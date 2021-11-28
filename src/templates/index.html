@@ -8,45 +8,61 @@
 </head>
 <body>
    <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg sticky-top navbar-dark nav-custom">
-      <div class="container">
-        <a class="navbar-brand" href="#">FYP</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link text-white" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Category
-              </a>
-              <ul class="dropdown-menu dropdwon-custom" aria-labelledby="navbarDropdown">
-               <li><a class="dropdown-item drop-cust-item text-white" href="#">Web</a></li>
-               <li><a class="dropdown-item drop-cust-item text-white" href="#">Android/iOS</a></li>
-               <li><a class="dropdown-item drop-cust-item text-white" href="#">Cloud</a></li>
-             </ul>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link text-white" href="#">About</a>
-             </li>
-          </ul>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-custom nav-custom">
+    <div class="container">
+      <a class="navbar-brand" href="#">FYP</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-beetween" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link text-white" aria-current="page" href="#">Home</a>
+          <a class="nav-link text-white" href="#">Category</a>
+          <a class="nav-link text-white" href="#">Post</a>
+          <a class="nav-link text-white" href="#">About</a>
         </div>
       </div>
-    </nav>
-
+    </div>
+  </nav>
+   
    <!-- Hero / Jumbotron-->
-   <section class="jumbotron text-center">
-      <img src="hero.jpg" alt="Jumbotron" class="hero-img">
-      <h2 class="display-4 pt-5 text-hero">What’s Is Your Passion?</h2>
-   </section>
+   <div class="container">
+    <section class="jumbotron text-center">
+      <img src="hero.jpg" class="img-fluid hero-img" alt="Hero">
+    </section>
+  </div>
 
+  <!-- Category -->
    <main id="mainContent">
-     <section class="container">
-        
+     <section id="category" class="mb-4">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col">
+              <h2>What is your passion?</h2>
+            </div>
+          </div>
+          <div class="row text-center mt-3">
+            <div class="col">
+              <a class="btn btn-success mt-3" href="#" role="button">Web</a>
+              <a class="btn btn-success mt-3" href="#" role="button">Android</a>
+              <a class="btn btn-success mt-3" href="#" role="button">Cloud</a>
+              <a class="btn btn-success mt-3" href="#" role="button">Language</a>
+              <a class="btn btn-success mt-3" href="#" role="button">Design</a>
+              <a class="btn btn-success mt-3" href="#" role="button">Animation</a>
+              <a class="btn btn-success mt-3" href="#" role="button">iOS</a>
+              <a class="btn btn-success mt-3" href="#" role="button">Multiplatform</a>
+              <a class="btn btn-success mt-3" href="#" role="button">Network</a>
+            </div>
+          </div>
+        </div>
      </section>
    </main>
+
+   <!-- Footer -->
+   <footer class="bg-custom fixed-bottom">
+    <div class="container text-center">
+      <p class="text-white pt-3">&copy <b>Find Your Passion</b> 2021</p>
+    </div>
+   </footer>
 </body>
 </html>

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    font-family: 'Roboto', 'sans-serif';
+    background-color: #f6f6f6;
+}
+
+.bg-custom, .dropdwon-custom li, .button-custom a {
+    background-color: #6D9886;
+}
+
+/* Skip Content */
+.skipLink {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    background-color: #ec1b0c;
+    color: white;
+    padding: 8px;
+    z-index: 200;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.skipLink:focus {
+    top: 60px;
+}
+
+/* Navbar / Header*/
+
+.nav-custom {
+    border-radius: 0 0 12px 12px;
+}
+
+.dropdwon-custom {
+    padding: 0;
+    border: none;
+}
+
+.drop-cust-item:hover {
+    color: #212121 !important;
+}
+
+/* Hero / Jumbotron */
+.jumbotron {
+    padding: 6rem 1rem;
+}
+
+.hero-img {
+    width: 600px;
+    height: 250px;
+    border-radius: 20px;
+}
+ /* Categori list */
+ h2 {
+     color: #6D9886;
+ }
+
+/* Footer */
+footer {
+    border-radius: 12px 12px 0 0;
+}

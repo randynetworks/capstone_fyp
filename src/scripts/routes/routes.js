@@ -8,7 +8,7 @@ const routes = {
   '/': Passions, // default page
   '/passions': Passions,
   '/post-info': PostInfo,
-  '/list-info/:id': ListInfo,
+  '/list-info': ListInfo,
   '/detail-info/:id': DetailInfo,
   '/comments/:id': Comments,
 };

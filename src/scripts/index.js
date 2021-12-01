@@ -8,6 +8,6 @@ window.addEventListener('hashchange', () => {
   App.renderPage();
 });
 
-window.addEventListener('load', () => {
+window.addEventListener('loader', () => {
   App.renderPage();
 });

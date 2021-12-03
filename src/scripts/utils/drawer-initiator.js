@@ -3,13 +3,13 @@ const DrawerInitiator = {
     drawer, content,
   }) {
     content.addEventListener('click', (event) => {
-      this._closeDrawer(event, drawer);
+      this._toggleDrawer(event, drawer);
     });
   },
 
-  _closeDrawer(event, drawer) {
+  _toggleDrawer(event, drawer) {
+    drawer.classList.toggle('actived');
     event.stopPropagation();
-    drawer.classList.remove('collapsed');
   },
 };
 

@@ -1,13 +1,18 @@
 import 'regenerator-runtime';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/js/bootstrap.min';
 import '../styles/main.css';
 import App from './views/app';
 
-window.addEventListener('hashchange', () => {
-  App.renderPage();
+const app = new App({
+  drawer: document.querySelector('#navbar-toggler'),
+  content: document.querySelector('#mainContent'),
 });
 
-window.addEventListener('loader', () => {
-  App.renderPage();
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
+
+window.addEventListener('load', () => {
+  app.renderPage();
 });

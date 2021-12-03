@@ -1,7 +1,7 @@
 import API_ENDPOINT from '../globals/api-endpoint';
 
 class FypDbSource {
-  static async passsions() {
+  static async passions() {
     const response = await fetch(API_ENDPOINT.PASSIONS);
     const responseJson = await response.json();
     return responseJson.results;

@@ -1,5 +1,6 @@
 import '../components/hero-component';
 import FypDbSource from '../../data/fyp-source';
+import createListCategory from '../templates/template-creator';
 
 const Passions = {
   async render() {
@@ -13,16 +14,8 @@ const Passions = {
         </div>
       </div>
       <div class="row text-center mt-3">
-        <div class="col">
-          <a class="btn btn-success mt-3" href="#" role="button">Web</a>
-          <a class="btn btn-success mt-3" href="#" role="button">Android</a>
-          <a class="btn btn-success mt-3" href="#" role="button">Cloud</a>
-          <a class="btn btn-success mt-3" href="#" role="button">Language</a>
-          <a class="btn btn-success mt-3" href="#" role="button">Design</a>
-          <a class="btn btn-success mt-3" href="#" role="button">Animation</a>
-          <a class="btn btn-success mt-3" href="#" role="button">iOS</a>
-          <a class="btn btn-success mt-3" href="#" role="button">Multiplatform</a>
-          <a class="btn btn-success mt-3" href="#" role="button">Network</a>
+        <div class="col" id="categoryInfo">
+          
         </div>
       </div>
     </div>`;
@@ -30,7 +23,10 @@ const Passions = {
 
   async afterRender() {
     const passions = await FypDbSource.passions();
-    console.log(passions);
+    const passionsCategory = document.querySelector('#categoryInfo');
+    passions.forEach((passion) => {
+      passionsCategory.innerHTML += createListCategory(passion);
+    });
   },
 };
 

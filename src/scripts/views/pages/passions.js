@@ -1,6 +1,6 @@
 import '../components/hero-component';
 import FypDbSource from '../../data/fyp-source';
-import createListCategory from '../templates/template-creator';
+import { createListCategory } from '../templates/template-creator';
 
 const Passions = {
   async render() {
@@ -14,7 +14,7 @@ const Passions = {
         </div>
       </div>
       <div class="row text-center mt-3">
-        <div class="col" id="categoryInfo">
+        <div class="col mb-5" id="categoryInfo">
           
         </div>
       </div>

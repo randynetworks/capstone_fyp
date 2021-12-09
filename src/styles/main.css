@@ -10,7 +10,7 @@ body, html {
     background-color: #f6f6f6;
 }
 
-.bg-custom, .dropdwon-custom li, .button-custom a {
+.bg-custom, .dropdwon-custom li, .button-custom a, .btn-submit {
     background-color: #6D9886;
 }
 
@@ -57,11 +57,79 @@ body, html {
     border-radius: 20px;
 }
  /* Categori list */
- h2 {
-     color: #6D9886;
- }
+ h2, h4 a, h5, .user-comment {
+    color: #6D9886;
+}
+
+ /* List-info */
+ .item-title {
+    text-decoration: none;
+}
+
+.item-title:hover {
+    color:tomato;
+}
+
+.list-item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+.list-item > div > img {
+    border-radius: 12px;
+}
+
+/* post-info */
+.post-custom {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+.post-custom label {
+    color: #6D9886;
+    font-weight: bold;
+}
+
+/* detail */
+.bg-detail {
+    background-color: white;
+    border-radius: 12px;
+}
+
+.card {
+    border:none;
+}
+
+.link {
+    text-decoration: none;
+    color: #6D9886;
+}
+
+.link:hover {
+    color: tomato;
+}
+
+.comentar {
+    margin-bottom: 100px;
+}
+
+/* comment form */
+.comment-custom {
+    border-radius: 12px;
+}
+
 
 /* Footer */
 footer {
     border-radius: 12px 12px 0 0;
+}
+
+
+@media screen and (min-width: 769px) {
+    .list-item > div > img {
+        border-radius: 12px;
+        width: 70%;
+    }
 }

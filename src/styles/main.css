@@ -98,6 +98,10 @@ body, html {
     border-radius: 12px;
 }
 
+.text-detail {
+    text-align: center;
+}
+
 .card {
     border:none;
 }
@@ -131,5 +135,9 @@ footer {
     .list-item > div > img {
         border-radius: 12px;
         width: 70%;
+    }
+
+    .text-detail {
+        text-align: left;
     }
 }

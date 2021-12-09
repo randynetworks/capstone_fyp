@@ -21,11 +21,11 @@ const createDetailInfo = (detail) => `
           </div>
     <div class="row mb-4 p-4 bg-detail">
         <div class="col">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-md-6">
                     <img src="${detail.data[0].url_image}" class="w-100 rounded" alt="Gambar ${detail.data[0].name}">
                 </div>
-                <div class="col-md-6 text-left">
+                <div class="col-md-6 text-left mt-4 text-detail">
                     <p class="card-text">${detail.data[0].description}</p>
                     <p class="card-text text-secondary">Di Unggah Oleh ${detail.data[0].username}</p>
                     <p class="card-text">Lihat secara lebih lengkap <a href="${detail.data[0].url}" class="link">disini.</a></p>

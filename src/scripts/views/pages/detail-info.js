@@ -7,11 +7,6 @@ const DetailInfo = {
     return `
     <section id="detail-item" class="mt-5">
       <div class="container pt-5">
-          <div class="row text-center mb-4">
-              <div class="col">
-                  <h2>Detail Info</h2>
-              </div>
-          </div>
           <div id="detailInfo">
           
           </div>

@@ -1,5 +1,6 @@
 import FypDbSource from '../../data/fyp-source';
 import { createListInfo } from '../templates/template-creator';
+import UrlParser from '../../routes/url-parser';
 
 const ListInfo = {
   async render() {
@@ -8,7 +9,7 @@ const ListInfo = {
       <div class="container pt-5">
         <div class="row text-center mb-4">
             <div class="col">
-                <h2>Web Developer</h2>
+                <h2 id="title"></h2>
             </div>
         </div>
         <div id="listInfo">
@@ -19,9 +20,14 @@ const ListInfo = {
   },
 
   async afterRender() {
-    const listInfo = await FypDbSource.listInfo();
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const listInfo = await FypDbSource.listInfo(url.id);
     const listInfoContainer = document.querySelector('#listInfo');
-    listInfo.forEach((info) => {
+    const title = document.querySelector('#title');
+    console.log(listInfo);
+    title.innerHTML = listInfo.passion[0].name;
+
+    listInfo.platforms.forEach((info) => {
       listInfoContainer.innerHTML += createListInfo(info);
     });
   },

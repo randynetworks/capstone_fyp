@@ -2,7 +2,7 @@ const createListCategory = (category) => `
     <a class="btn btn-success mt-3" href="#/list-info/${category.id}" role="button">${category.name}</a>`;
 
 const createListInfo = (info) => `
-    <div class="row list-item mb-4">
+    <div class="row list-item mb-4 mx-2">
         <div class="col align-self-center">
             <img src="${info.url_image}" alt="Gambar ${info.name}" class="img-fluid">
         </div>

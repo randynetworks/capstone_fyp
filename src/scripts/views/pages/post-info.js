@@ -20,12 +20,15 @@ const PostInfo = {
               <input type="text" class="form-control" id="nameOfCourse" placeholder="Nama Kelas Kursus/Pelatihan" required>
           </div>
           <div class="mb-3">
-              <label for="categoryOfCourse" class="form-label">Kategory</label>
-              <input type="text" class="form-control" id="categoryOfCourse" placeholder="Kategori" required>
+              <div class="form-group">
+              <label for="exampleFormControlSelect1">Kategori Passion</label>
+              <select class="form-control" id="listKategory">
+              </select>
+            </div>
           </div>
           <div class="mb-3">
               <label for="imageOfCourse" class="form-label">Gambar</label>
-              <input type="file" class="form-control" id="imageOfCourse">
+              <input type="text" class="form-control" id="imageOfCourse">
           </div>
           <div class="mb-3">
               <label for="linkOfCourse" class="form-label">URL</label>
@@ -46,7 +49,14 @@ const PostInfo = {
 
   async afterRender() {
     const postInfo = await FypDbSource.postInfo();
-    console.log(postInfo);
+    const listKategory = document.getElementById('listKategory');
+    const dataListKategory = await FypDbSource.passions();
+    dataListKategory.forEach((kategori) => {
+      const optionKategory = document.createElement('option');
+      optionKategory.text = kategori.name;
+      optionKategory.value = kategori.id;
+      listKategory.add(optionKategory);
+    });
   },
 };
 

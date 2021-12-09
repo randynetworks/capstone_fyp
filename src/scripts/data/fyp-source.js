@@ -13,15 +13,16 @@ class FypDbSource {
     return responseJson.data;
   }
 
-  static async listInfo() {
-    const response = await fetch(API_ENDPOINT.LIST_INFO);
+  static async listInfo(id) {
+    const response = await fetch(API_ENDPOINT.LIST_INFO(id));
     const responseJson = await response.json();
     return responseJson.data;
   }
 
   static async detailInfo(id) {
     const response = await fetch(API_ENDPOINT.DETAIL_INFO(id));
-    return response.json();
+    const responseJson = await response.json();
+    return responseJson;
   }
 
   static async comments(id) {

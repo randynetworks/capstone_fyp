@@ -24,7 +24,6 @@ const ListInfo = {
     const listInfo = await FypDbSource.listInfo(url.id);
     const listInfoContainer = document.querySelector('#listInfo');
     const title = document.querySelector('#title');
-    console.log(listInfo);
     title.innerHTML = listInfo.passion[0].name;
 
     listInfo.platforms.forEach((info) => {

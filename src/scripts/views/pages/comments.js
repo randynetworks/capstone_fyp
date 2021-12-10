@@ -38,10 +38,10 @@ const Comments = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const commentsList = await FypDbSource.comments(url.id);
-    console.log(commentsList.data.comments);
     const commentsContainer = document.querySelector('#comments-container');
 
-    commentsList.data.comments.forEach((comment) => {
+    const commentsData = commentsList.data.comments;
+    commentsData.forEach((comment) => {
       commentsContainer.innerHTML += createComments(comment);
     });
   },

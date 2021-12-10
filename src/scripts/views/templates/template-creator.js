@@ -35,9 +35,31 @@ const createDetailInfo = (detail) => `
     </div>
     <div class="row text-center comentar">
         <div class="col">
-            <h5 class="card-title"><a href="${`/#/comments/${detail.data.id}`}" class="link">Lihat Komentar</a></h5>
+            <h5 class="card-title"><a href="${`/#/comments/${detail.data[0].id}`}" class="link">Lihat Komentar</a></h5>
         </div>
     </div>
 `;
 
-export { createListCategory, createListInfo, createDetailInfo };
+const createComments = (comments) => `
+    <div class="card p-3 mt-2 comment-custom">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="user d-flex flex-row align-items-center"> 
+                <span>
+                    <small class="font-weight-bold user-comment">${comments.username}</small> 
+                    <small class="font-weight-bold">${comments.comment}</small>
+                </span> 
+            </div> 
+            <small>3 days ago</small>
+        </div>
+        <div class="action d-flex justify-content-between mt-2 align-items-center">
+            <div class="reply px-4"> <small>Remove</small> <span class="dots"></span> <small>Reply</small> </div>
+        </div>
+    </div>
+    `;
+
+export {
+  createListCategory,
+  createListInfo,
+  createDetailInfo,
+  createComments,
+};

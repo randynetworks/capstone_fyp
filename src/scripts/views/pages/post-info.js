@@ -28,7 +28,7 @@ const PostInfo = {
           </div>
           <div class="mb-3">
               <label for="imageOfCourse" class="form-label">Gambar</label>
-              <input type="text" class="form-control" id="imageOfCourse">
+              <input type="text" class="form-control" id="imageOfCourse" placeholder="Masukan Url Gambar">
           </div>
           <div class="mb-3">
               <label for="linkOfCourse" class="form-label">URL</label>

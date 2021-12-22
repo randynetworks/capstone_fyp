@@ -7,10 +7,21 @@ class FypDbSource {
     return responseJson.data;
   }
 
-  static async postInfo() {
-    const response = await fetch(API_ENDPOINT.POST_INFO);
-    const responseJson = await response.json();
-    return responseJson.data;
+  static async postInfo(cources) {
+    fetch(API_ENDPOINT.POST_INFO, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(cources),
+    })
+      .then((response) => {
+        response.json();
+        console.log(response);
+      })
+      .catch((error) => {
+        showResponseMessage(error);
+      });
   }
 
   static async listInfo(id) {

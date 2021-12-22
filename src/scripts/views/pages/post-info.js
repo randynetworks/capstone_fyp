@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 import FypDbSource from '../../data/fyp-source';
 
 const PostInfo = {
@@ -39,7 +40,7 @@ const PostInfo = {
               <textarea class="form-control" id="courseDescription" rows="3" placeholder="Info detail" required></textarea>
           </div>
           <div class="mb-3 text-end">
-              <button class="btn btn-submit text-white" type="submit">Unggah</button>
+              <button class="btn btn-submit text-white" type="submit" id="buttonSave">Unggah</button>
           </div>
         </div>
       </div>
@@ -48,14 +49,37 @@ const PostInfo = {
   },
 
   async afterRender() {
-    const postInfo = await FypDbSource.postInfo();
     const listKategory = document.getElementById('listKategory');
+    const nameOfContentCreator = document.querySelector(
+      '#nameOfContentCreator'
+    );
+    const nameOfCourse = document.querySelector('#nameOfCourse');
+    const imageOfCourse = document.querySelector('#imageOfCourse');
+    const linkOfCourse = document.querySelector('#linkOfCourse');
+    const courseDescription = document.querySelector('#courseDescription');
+
+    const buttonSave = document.querySelector('#buttonSave');
+
     const dataListKategory = await FypDbSource.passions();
     dataListKategory.forEach((kategori) => {
       const optionKategory = document.createElement('option');
       optionKategory.text = kategori.name;
       optionKategory.value = kategori.id;
       listKategory.add(optionKategory);
+    });
+
+    buttonSave.addEventListener('click', () => {
+      const cources = {
+        username: nameOfContentCreator.value,
+        name: nameOfCourse.value,
+        url: linkOfCourse.value,
+        url_image: imageOfCourse.value,
+        description: courseDescription.value,
+        passion_id: listKategory.value,
+      };
+      FypDbSource.postInfo(cources);
+
+      window.location = '/';
     });
   },
 };

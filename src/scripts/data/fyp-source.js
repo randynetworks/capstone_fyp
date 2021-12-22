@@ -40,6 +40,23 @@ class FypDbSource {
     const response = await fetch(API_ENDPOINT.COMMENTS(id));
     return response.json();
   }
+
+  static async postComment(comment) {
+    fetch(API_ENDPOINT.POST_COMMENT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(comment),
+    })
+      .then((response) => {
+        response.json();
+        console.log(response);
+      })
+      .catch((error) => {
+        showResponseMessage(error);
+      });
+  }
 }
 
 export default FypDbSource;

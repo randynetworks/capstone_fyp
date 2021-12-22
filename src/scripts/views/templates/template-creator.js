@@ -48,11 +48,7 @@ const createComments = (comments) => `
                     <small class="font-weight-bold user-comment">${comments.username}</small> 
                     <small class="font-weight-bold">${comments.comment}</small>
                 </span> 
-            </div> 
-            <small>3 days ago</small>
-        </div>
-        <div class="action d-flex justify-content-between mt-2 align-items-center">
-            <div class="reply px-4"> <small>Remove</small> <span class="dots"></span> <small>Reply</small> </div>
+            </div>
         </div>
     </div>
     `;

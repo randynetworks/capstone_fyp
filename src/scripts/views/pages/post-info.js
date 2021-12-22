@@ -79,7 +79,7 @@ const PostInfo = {
       };
       FypDbSource.postInfo(cources);
 
-      window.location = '/';
+      window.location = `/#/list-info/${listKategory.value}`;
     });
   },
 };

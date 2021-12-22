@@ -21,11 +21,11 @@ const Comments = {
                         <input type="email" class="form-control" id="nameOfContentCreator" placeholder="Nama Anda">
                     </div>
                     <div class="mb-3 form-floating">
-                        <textarea class="form-control" placeholder="Masukkan komentar" id="floatingTextarea"></textarea>
-                        <label for="floatingTextarea">Komentar</label>
+                        <textarea class="form-control" placeholder="Masukkan komentar" id="comment"></textarea>
+                        <label for="comment">Komentar</label>
                     </div>
                     <div class="mb-3 text-end">
-                        <button class="btn btn-submit text-white" type="submit">Unggah</button>
+                        <button class="btn btn-submit text-white" type="submit" id="buttonSave">Unggah</button>
                     </div>
                   </div>
               </div>
@@ -37,12 +37,30 @@ const Comments = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const nameOfContentCreator = document.querySelector(
+      // eslint-disable-next-line comma-dangle
+      '#nameOfContentCreator'
+    );
+    const comment = document.querySelector('#comment');
+
     const commentsList = await FypDbSource.comments(url.id);
+
     const commentsContainer = document.querySelector('#comments-container');
 
     const commentsData = commentsList.data.comments;
-    commentsData.forEach((comment) => {
-      commentsContainer.innerHTML += createComments(comment);
+    commentsData.forEach((c) => {
+      commentsContainer.innerHTML += createComments(c);
+    });
+
+    buttonSave.addEventListener('click', () => {
+      const dataComment = {
+        username: nameOfContentCreator.value,
+        comment: comment.value,
+        platform_id: url.id,
+      };
+      FypDbSource.postComment(dataComment);
+
+      window.location = `/#/comments/${url.id}`;
     });
   },
 };

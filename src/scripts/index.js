@@ -1,8 +1,7 @@
 import 'regenerator-runtime';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'bootstrap/dist/js/bootstrap.min';
 import '../styles/main.css';
 import App from './views/app';
+import swRegister from './utils/sw-register';
 
 const app = new App({
   drawer: document.querySelector('#navbar-toggler'),
@@ -15,4 +14,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });
